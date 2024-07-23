@@ -2,10 +2,9 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import MyDrawer from "./drawer";
-import { navItems, drawerWidth } from "../../utils/constants";
+import { navItems } from "../../utils/constants";
 
 jest.mock("../../utils/constants", () => ({
-  drawerWidth: 240,
   navItems: [
     { name: "Home", link: "home" },
     { name: "Units", link: "units" },
