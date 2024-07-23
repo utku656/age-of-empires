@@ -11,6 +11,7 @@ import {
 } from "../../redux/actions";
 import UnitsTable from "../../components/table/table";
 import FilterListIcon from "@mui/icons-material/FilterList";
+import "./units.modules.scss";
 
 export default function Units() {
   const dispatch = useDispatch();
@@ -44,22 +45,13 @@ export default function Units() {
         <FilterListIcon /> Filters
       </Button>
       <Drawer
-        PaperProps={{ sx: { height: "calc(100% - 64px)", top: 64 } }}
+        PaperProps={{ className: "drawerPaper" }}
         anchor="left"
         open={isDrawerOpen}
         onClose={() => toggleDrawer(false)}
         hideBackdrop
       >
-        <Box
-          onKeyDown={() => toggleDrawer(false)}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: "1rem",
-            p: 1,
-            flexDirection: "column",
-          }}
-        >
+        <Box onKeyDown={() => toggleDrawer(false)} className="unitsDrawerBox">
           <AgesFilter
             agesFilter={agesFilter}
             handlechangeAges={handlechangeAges}
@@ -73,14 +65,7 @@ export default function Units() {
               ></CostsFilter>
             </React.Fragment>
           ))}
-          <Box
-            sx={{
-              bottom: "1rem",
-              position: "absolute",
-              display: "flex",
-              gap: "16px",
-            }}
-          >
+          <Box className="actionsBox">
             <Button variant="contained" onClick={() => toggleDrawer(false)}>
               Cancel
             </Button>

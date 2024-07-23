@@ -10,6 +10,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUnitDetail } from "../../redux/actions";
 import { useParams } from "react-router-dom";
+import "./unit-detail.modules.scss";
 
 export default function UnitDetail() {
   const unit = useSelector((state) => state.selectedUnit);
@@ -20,7 +21,7 @@ export default function UnitDetail() {
     dispatch(fetchUnitDetail(id));
   }, [dispatch]);
   return (
-    <TableContainer component={Paper} sx={{ m: 2 }}>
+    <TableContainer component={Paper} className="unitDetailTableContainer">
       <Table>
         <TableBody>
           <TableRow>

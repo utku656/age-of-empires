@@ -1,0 +1,6 @@
+@import "styles/variables";
+@import "styles/mixins";
+body {
+  margin: 0;
+  font-family: $font-stack;
+}

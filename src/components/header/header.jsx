@@ -27,23 +27,19 @@ const Header = () => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            className="headerWebIconButton"
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
+          <Typography variant="h6" component="div" className="headerTypography">
             Age of Empires
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box className="headerLinkBox">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={`/${item.link}`}
-                sx={{ color: "#fff", pr: 5 }}
+                className="headerLink"
               >
                 {item.name}
               </Link>

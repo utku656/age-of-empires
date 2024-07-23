@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Drawer, Link, Box, Divider } from "@mui/material";
 import { drawerWidth, navItems } from "../../utils/constants";
+import "./drawer.modules.scss";
 
 const MyDrawer = (props) => {
   return (
@@ -12,24 +13,10 @@ const MyDrawer = (props) => {
         ModalProps={{
           keepMounted: true,
         }}
-        sx={{
-          display: { xs: "block", sm: "none" },
-          "& .MuiDrawer-paper": {
-            boxSizing: "border-box",
-            width: drawerWidth,
-          },
-        }}
+        className="drawer"
       >
-        <Box
-          onClick={props.handleDrawerToggle}
-          sx={{
-            textAlign: "center",
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
-          <Typography variant="h6" sx={{ my: 2 }}>
+        <Box onClick={props.handleDrawerToggle} className="drawerNavigationBox">
+          <Typography variant="h6" className="drawerName">
             Age of Empires
           </Typography>
           <Divider />

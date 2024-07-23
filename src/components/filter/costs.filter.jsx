@@ -1,9 +1,10 @@
 import React from "react";
 import { Box, Slider, FormControlLabel, Checkbox } from "@mui/material";
+import "./filter.modules.scss";
 
 function CostsFilter({ value, item, handleChangeRange }) {
   return (
-    <Box sx={{ width: 300, display: "flex", alignItems: "center" }}>
+    <Box className="costFilterBox">
       <FormControlLabel
         control={
           <Checkbox

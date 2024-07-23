@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Homepage from "./pages/homepage/homepage";
 import Units from "./pages/units/units";
 import Header from "./components/header/header";

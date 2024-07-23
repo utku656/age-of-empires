@@ -1,0 +1,26 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.headerWebIconButton {
+  margin-right: 2rem;
+
+  @include respond-to(md) {
+    display: none;
+  }
+}
+.headerLinkBox {
+  @include respond-to(sm) {
+    display: none;
+  }
+}
+.headerTypography {
+  flex-grow: 1;
+
+  @include respond-to(sm) {
+    display: none;
+  }
+}
+.headerLink {
+  color: $white-color !important;
+  margin-right: 1rem !important;
+}

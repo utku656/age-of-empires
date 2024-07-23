@@ -1,0 +1,7 @@
+@import "../../styles/mixins";
+
+.costFilterBox {
+  width: 300px;
+  align-items: center;
+  @include flex-center;
+}
