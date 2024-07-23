@@ -1,8 +1,38 @@
-# React + Vite
+# Age of Empires Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hobby application of Age of Empires.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+After cloning the project you can install node modules by
+
+```bash
+npm install
+```
+
+To start json-server with 3030 port
+
+```bash
+json-server --watch age-of-empires-units.json --port 3030
+```
+
+To start application
+
+```bash
+npm run dev
+```
+
+To run tests
+
+```bash
+npm run test
+```
+
+## Libraries used
+
+- Vite
+- MUI
+- react-testing-library - jest
+- redux
+- redux-saga
+- json-server
