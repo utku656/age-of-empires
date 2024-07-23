@@ -2,9 +2,3 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-
-.home-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
